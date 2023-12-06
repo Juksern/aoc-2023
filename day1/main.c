@@ -123,9 +123,7 @@ void solution(char** file_content, int num_lines) {
         }
 
         char out[3] = {start, end, '\0'};
-        int wow = strtol(out, NULL, 10);
-
-        result += wow;
+        result += strtol(out, NULL, 10);
         free(copy);
     }
 
