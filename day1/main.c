@@ -63,13 +63,13 @@ void replace(char *copy, const char *word, int num) {
     char *res = strstr(copy, word);
 
     while (res != NULL) {
-        int wordLength = strlen(word);
-        int numLength = snprintf(NULL, 0, "%d", num);
-        char tempBuffer[strlen(res) - wordLength + 1];
-        strcpy(tempBuffer, res + wordLength);
-        snprintf(res, wordLength + 1, "%d", num);
-        strcat(res, tempBuffer);
-        res += numLength;
+        int word_length = strlen(word);
+        int num_length = snprintf(NULL, 0, "%d", num);
+        char temp_buffer[strlen(res) - word_length + 1];
+        strcpy(temp_buffer, res + word_length);
+        snprintf(res, word_length + 1, "%d", num);
+        strcat(res, temp_buffer);
+        res += num_length;
         res = strstr(res, word);
     }
 }
